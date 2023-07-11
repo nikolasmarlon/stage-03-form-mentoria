@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição mentoria</title>
@@ -9,108 +14,110 @@
 </head>
 <body>
 
-    <header>
-        <h1>Mentoria</h1>
-        <p>
-            Preencha o formulário abaixo para agendar a sua mentoria
-        </p>
-    </header>
+   <div id="pagina">
+        <header>
+            <h1>Mentoria</h1>
+            <p>
+                Preencha o formulário abaixo para agendar a sua mentoria
+            </p>
+        </header>
 
-    <form id="form-mentoria">
-        <fieldset>
-            <div class="fieldset-container">
-                <legend>Informações Pessoais</legend>
+        <form id="form-mentoria">
+            <fieldset>
+                <div class="fieldset-container">
+                    <legend>Informações Pessoais</legend>
 
-                <div id="duas-colunas">
-                    <div class="input-container">
-                        <label for="nome">Nome</label>
-                        <input required minlength="3" type="text" name="nome" id="nome">
+                    <div id="duas-colunas">
+                        <div class="input-container">
+                            <label for="nome">Nome</label>
+                            <input required minlength="3" type="text" name="nome" id="nome">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input required minlength="3" type="text" name="sobrenome" id="sobrenome">
+                        </div>
                     </div>
 
                     <div class="input-container">
-                        <label for="sobrenome">Sobrenome</label>
-                        <input required minlength="3" type="text" name="sobrenome" id="sobrenome">
+                        <label for="email">Email <span>(digite um email válido)</span></label>
+                        <input required type="email" name="email" id="email">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="senha">Senha <span>(mínimo de 6 caracteres)</span></label>
+                        <input required minlength="8" type="password" name="senha" id="senha">
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="fieldset-container">
+                    <legend>Informações do Mentor</legend>
+
+                    <div class="input-container">
+                        <label for="nome-mentor">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+                        <input required minlength="3" type="text" name="nome-mentor" id="nome-mentor">
                     </div>
                 </div>
+            </fieldset>
 
-                <div class="input-container">
-                    <label for="email">Email <span>(digite um email válido)</span></label>
-                    <input required type="email" name="email" id="email">
-                </div>
-
-                <div class="input-container">
-                    <label for="senha">Senha <span>(mínimo de 6 caracteres)</span></label>
-                    <input required minlength="8" type="password" name="senha" id="senha">
-                </div>
-
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <div class="fieldset-container">
-                <legend>Informações do Mentor</legend>
-
-                <div class="input-container">
-                    <label for="nome-mentor">Nome do seu mentor <span>(só o primeiro nome)</span></label>
-                    <input required minlength="3" type="text" name="nome-mentor" id="nome-mentor">
-                </div>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <div class="fieldset-container">
-                <legend>Seus Horários disponíveis</legend>
-                    
-
-                        <fieldset>
-                            <legend>Primeira Mentoria</legend>
-                            <div class="tres-colunas">
-                                <div class="input-container">
-                                    <label for="data-mentoria-1">Data <span>(DD/MM/AAAA)</span></label>
-                                    <input  type="date" name="data-mentoria-1" id="data-mentoria-1">
-                                </div>
-                                
-                                <div class="input-container">
-                                    <label for="inicio">Das</label>
-                                    <input  type="time" name="inicio" id="inicio">
-                                </div>
-                                    
-                                <div class="input-container">
-                                    <label for="fim">Até</label>
-                                    <input  type="time" name="fim" id="fim">
-                                </div>
-
-                            </div>
-                        </fieldset>
+            <fieldset>
+                <div class="fieldset-container">
+                    <legend>Seus Horários disponíveis</legend>
                         
-                        <fieldset>
-                            <legend>Segunda Mentoria</legend>
-                            <div class="tres-colunas">
-                                <div class="input-container">
-                                    <label for="data-mentoria-2">Data <span>(DD/MM/AAAA)</span></label>
-                                    <input  type="date" name="data-mentoria-2" id="data-mentoria-2">
-                                </div>
-                                
-                                <div class="input-container">
-                                    <label for="inicio-mentoria-2">Das</label>
-                                    <input  type="time" name="inicio-mentoria-2" id="inicio-mentoria-2">
-                                </div>
-                                    
-                                <div class="input-container">
-                                    <label for="fim-mentoria-2">Até</label>
-                                    <input  type="time" name="fim-mentoria-2" id="fim-mentoria-2">
-                                </div>
-                            </div>
-                        </fieldset>                         
-            </div>
-        </fieldset>
-    </form>
 
-    <footer>
-        <button form="form-mentoria">
-            Salvar
-        </button>
-    </footer>
+                            <fieldset>
+                                <legend>Primeira Mentoria</legend>
+                                <div class="tres-colunas">
+                                    <div class="input-container">
+                                        <label for="data-mentoria-1">Data <span>(DD/MM/AAAA)</span></label>
+                                        <input  type="date" name="data-mentoria-1" id="data-mentoria-1">
+                                    </div>
+                                    
+                                    <div class="input-container">
+                                        <label for="inicio">Das</label>
+                                        <input  type="time" name="inicio" id="inicio">
+                                    </div>
+                                        
+                                    <div class="input-container">
+                                        <label for="fim">Até</label>
+                                        <input  type="time" name="fim" id="fim">
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>Segunda Mentoria</legend>
+                                <div class="tres-colunas">
+                                    <div class="input-container">
+                                        <label for="data-mentoria-2">Data <span>(DD/MM/AAAA)</span></label>
+                                        <input  type="date" name="data-mentoria-2" id="data-mentoria-2">
+                                    </div>
+                                    
+                                    <div class="input-container">
+                                        <label for="inicio-mentoria-2">Das</label>
+                                        <input  type="time" name="inicio-mentoria-2" id="inicio-mentoria-2">
+                                    </div>
+                                        
+                                    <div class="input-container">
+                                        <label for="fim-mentoria-2">Até</label>
+                                        <input  type="time" name="fim-mentoria-2" id="fim-mentoria-2">
+                                    </div>
+                                </div>
+                            </fieldset>                         
+                </div>
+            </fieldset>
+        </form>
+
+        <footer>
+            <button form="form-mentoria">
+                Salvar
+            </button>
+        </footer>
+   </div>
     
 </body>
 </html>
