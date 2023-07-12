@@ -78,6 +78,8 @@ fieldset legend{
     font-size: 24px;
     line-height: 34px;
     border-bottom: 1px solid #E6E6F0;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
 }
 
 .duas-colunas, .tres-colunas{
@@ -85,6 +87,17 @@ fieldset legend{
     gap: 22px;  
      
 }
+
+/*nth-of-type seleciona elementos irmão do mesmo tipo
+* Ex. abaixo temos duas divs irmãs 
+* selecionamos a primeira com div:nth-of-type(1) para
+* adicionar flex-grow(crescimento flexível )
+* 
+*flex-grow - especifica o quanto o item crescerá em relação 
+* aos demais item flexíveis dentro do mesmo container
+* no caso abaixo, cada elemento dentro do container ocupará 
+* o mesmo tamanho (cada um com metado do container pai)
+*/
 
 .duas-colunas div:nth-of-type(1){
     flex-grow: 1;
@@ -104,9 +117,71 @@ fieldset legend{
     flex-grow: 1;
 }
 
+
 .input-container{
     display: flex;
+    flex-direction: column;   
+}
+
+.input-container label{
+    font-size: 14px;
+    line-height: 24px;
+    color: #4E4958;
+    margin-bottom: 8px;
+}
+
+.input-container label span{
+    font-size: 12px;
+    line-height: 20px;
+    color: #817d88;
+}
+
+
+.input-container input {
+    height: 56px;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    background-color: #FAFAFC;
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+.sub-legenda {
+    font-size: 20px;
+    border: 0;
+    margin-bottom: 8px;
+}
+
+.sub-fieldset legend{
+    margin-bottom: 11px;
+    padding: 0;
+}
+
+
+footer {
+    height: 160px;
+    background-color: #535971;
+    margin-bottom: 100px;
+    border-radius: 0 0 20px 20px;
+    padding: 51px 71px;
+    display: flex;
     flex-direction: column;
-      
-    
+}
+
+footer button {
+    height: 55px;
+    border-radius: 20px;
+    background-color: #FF5374;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-family: 'Staatliches', cursive;
+    border: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+footer button:hover{
+    background-color: #c3415b;
 }
